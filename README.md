@@ -59,7 +59,7 @@ The **target variable** represents overall customer satisfaction (binary classif
 ![Confusion Matrix](images/confusion_matrix.png)
 
 ### ROC Curve
-![ROC Curve](images/roc_curve.png)
+![ROC Curve](images/roc_auc_curve.png)
 
 ### Class Imbalance
 ![Class Imbalance](images/class_imbalance.png)
