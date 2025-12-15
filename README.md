@@ -101,15 +101,25 @@ These metrics ensured robust evaluation beyond accuracy alone, especially for cl
 
 ## 📂 Project Structure
 airline-customer-satisfaction-ml/
+
 ├── notebooks/
+
 │ └── airline_customer_satisfaction.ipynb
+
 ├── images/
+
 │ ├── roc_curve.png
+
 │ ├── confusion_matrix.png
+
 ├── dataset/
+
 │ └── airline_data.csv
+
 ├── README.md
+
 ├── requirements.txt
+
 └── .gitignore
 
 
