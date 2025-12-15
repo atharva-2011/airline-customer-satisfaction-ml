@@ -1,55 +1,94 @@
-# ✈️ Airline Customer Satisfaction Prediction
+# ✈️ Airline Customer Satisfaction Prediction using Logistic Regression
 
 ## 📌 Project Overview
-This project aims to predict whether an airline customer is **Satisfied** or **Dissatisfied** using machine learning techniques.  
-The analysis focuses on identifying the key service and operational factors that influence customer satisfaction.
+This project focuses on predicting whether an airline customer is **Satisfied** or **Dissatisfied** using machine learning.  
+The objective is not only to build a predictive model, but also to understand **which factors most strongly influence customer satisfaction**.
+
+The project demonstrates an end-to-end ML workflow including EDA, statistical feature selection, model building, evaluation, and interpretation.
 
 ---
 
-## 🔍 Dataset
-The dataset contains airline customer information including:
-- Demographic attributes
-- Flight details
-- Service quality ratings
-- Operational delay metrics
+## 🔍 Dataset Description
+The dataset contains airline customer information such as:
+- Demographic attributes (e.g., Age, Gender)
+- Flight-related details (e.g., Class, Type of Travel, Flight Distance)
+- Service quality ratings (e.g., Seat Comfort, Inflight Entertainment, Online Support)
+- Operational metrics (e.g., Departure and Arrival Delays)
 
-The target variable represents overall customer satisfaction.
+The **target variable** represents overall customer satisfaction (binary classification).
 
+---
 
 ## 🧠 Methodology
-The project follows a structured machine learning workflow:
 
-1. **Exploratory Data Analysis (EDA)**
-   - Distribution analysis
-   - Correlation analysis
-   - Data quality checks
+### 1️⃣ Exploratory Data Analysis (EDA)
+- Analyzed feature distributions
+- Checked correlations between numeric variables
+- Identified patterns influencing customer satisfaction
 
-2. **Feature Selection**
-   - Applied **ANOVA (F-test)** since all input features are numeric and the target variable is categorical
-   - Identified statistically significant features influencing customer satisfaction
+### 2️⃣ Feature Selection
+- Since **all input features are numeric** and the target variable is categorical,  
+  **ANOVA (F-test)** was applied for feature selection
+- This helped identify statistically significant predictors of satisfaction
 
-3. **Data Preprocessing**
-   - Feature scaling using **StandardScaler**
-   - Train-test split
+### 3️⃣ Data Preprocessing
+- Defined features (`X`) and target (`y`)
+- Scaled features using **StandardScaler**
+- Performed train-test split
 
-4. **Model Building**
-   - Implemented **Logistic Regression**
-   - Hyperparameter tuning using GridSearchCV
+### 4️⃣ Model Building
+- Implemented **Logistic Regression**
+- Tuned hyperparameters using **GridSearchCV**
+- Addressed class balance where applicable
 
-5. **Model Evaluation**
-   - Confusion Matrix
-   - ROC Curve & AUC Score
-   - Threshold optimization for better class separation
+### 5️⃣ Model Evaluation
+- Confusion Matrix
+- ROC Curve & ROC-AUC score
+- Accuracy, Precision, Recall, and F1-score
+- Threshold optimization using ROC analysis
 
-6. **Model Interpretation**
-   - Analyzed Logistic Regression coefficients to understand feature impact
+### 6️⃣ Model Interpretation
+- Analyzed Logistic Regression coefficients
+- Identified direction and magnitude of feature impact on satisfaction
+
+---
+
+## 📊 Model Evaluation
+
+### Confusion Matrix
+![Confusion Matrix](images/confusion matrix.png)
+
+### ROC Curve
+![ROC Curve](images/roc curve.png)
+
+### Class Imbalance
+![Class Imbalance](images/class imbalance.png)
+
+### Heatmap
+![Heatmap](images/heatmap.png)
 
 
-## 📊 Results & Insights
-- Service quality features such as **Inflight Entertainment**, **Online Support**, **Seat Comfort**, and **Ease of Online Booking** were the strongest predictors of customer satisfaction.
-- Operational delay features showed comparatively lower influence.
-- Logistic Regression demonstrated strong discrimination capability based on ROC-AUC evaluation.
+---
 
+## 📈 Performance Metrics
+The model was evaluated using the following metrics:
+- Accuracy
+- Precision
+- Recall
+- F1-score
+- ROC-AUC
+
+These metrics ensured robust evaluation beyond accuracy alone, especially for classification performance.
+
+---
+
+## 🧠 Key Insights
+- **Service quality features** such as *Inflight Entertainment*, *Seat Comfort*, *Online Support*, and *Ease of Online Booking* were the strongest drivers of customer satisfaction.
+- **Digital experience** plays a critical role in shaping customer perception.
+- **Operational delay features** (departure/arrival delays) showed comparatively lower influence than service-related features.
+- Logistic Regression provided both strong performance and high interpretability.
+
+---
 
 ## 🛠️ Technologies Used
 - Python
@@ -58,4 +97,37 @@ The project follows a structured machine learning workflow:
 - Matplotlib & Seaborn
 - Jupyter Notebook
 
+---
 
+## 📂 Project Structure
+airline-customer-satisfaction-ml/
+├── notebooks/
+│ └── airline_customer_satisfaction.ipynb
+├── images/
+│ ├── roc_curve.png
+│ ├── confusion_matrix.png
+├── dataset/
+│ └── airline_data.csv
+├── README.md
+├── requirements.txt
+└── .gitignore
+
+
+---
+
+## 🚀 How to Run the Project
+
+1. Clone the repository - '''bash git clone https://github.com/atharva-2011/airline-customer-satisfaction-ml.git
+2. Install Required Dependecies
+3. Launch Jupyter Notebook
+4. Open the notebook inside the notebooks/ folder and run all cells.
+
+## 📈 Future Improvements
+
+Compare Logistic Regression with ANN models
+Apply SHAP for advanced model explainability
+Deploy the model using Streamlit for interactive usage
+
+## 👤 Author
+### Atharva Ayachit
+#### Aspiring Data Scientist | Data Analyst
