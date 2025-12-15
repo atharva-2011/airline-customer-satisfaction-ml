@@ -1,0 +1,42 @@
+# Data Handling
+import pandas as pd
+import numpy as np
+
+# Visualization
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+# Preprocessing
+from sklearn.preprocessing import StandardScaler,LabelEncoder
+
+# ML Model
+from sklearn.linear_model import LogisticRegression
+
+# Feature Selection
+from sklearn.feature_selection import RFE, RFECV
+
+# Train-Test Split
+from sklearn.model_selection import train_test_split,cross_val_score,learning_curve
+
+# Evaluation Metrics
+from sklearn.metrics import (
+    accuracy_score,
+    precision_score,
+    recall_score,
+    f1_score,
+    confusion_matrix,
+    ConfusionMatrixDisplay,
+    classification_report,
+    roc_curve,
+    auc,
+    roc_auc_score
+)
+
+
+# warnings
+import warnings
+warnings.filterwarnings('ignore')
+
+# Set style for better visualizations
+plt.style.use('default')
+sns.set_palette("flare")
