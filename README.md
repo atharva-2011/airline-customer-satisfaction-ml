@@ -56,13 +56,13 @@ The **target variable** represents overall customer satisfaction (binary classif
 ## 📊 Model Evaluation
 
 ### Confusion Matrix
-![Confusion Matrix](images/confusion matrix.png)
+![Confusion Matrix](images/confusion_matrix.png)
 
 ### ROC Curve
-![ROC Curve](images/roc curve.png)
+![ROC Curve](images/roc_curve.png)
 
 ### Class Imbalance
-![Class Imbalance](images/class imbalance.png)
+![Class Imbalance](images/class_imbalance.png)
 
 ### Heatmap
 ![Heatmap](images/heatmap.png)
